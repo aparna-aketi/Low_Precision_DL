@@ -1,6 +1,7 @@
 # Low Precision Decentralized Training with Heterogenous Data
 
-Official PyTorch implementation for  "**Low Precision Decentralized Distributed Learning with Heterogenous Data**"
+Official PyTorch implementation for  "**Low Precision Decentralized Distributed Training with Heterogenous Data**"
+
 [[Paper]]()
 
 ## Abstract 
@@ -23,11 +24,14 @@ This repository currently contains experiments reported in the paper for Low pre
 sh run.sh
 ```
 
+### References
+This code uses the [Facebook's Stochastic Gradient Push Repository](https://github.com/facebookresearch/stochastic_gradient_push) for building up the decentralized learning setup. We update the code base to include Deep-Squeeze, CHOCO-SGD, Quasi-Gobal Momentum and 8-bit integer training.
+
 ### Citation
 ```
 @inproceedings{
 aketi2021,
-title={Low Precision Decentralized Distributed Learning with Heterogenous Data},
+title={Low Precision Decentralized Distributed Training with Heterogenous Data},
 author={Sai Aparna Aketi, Sangamesh Kodge, and Kaushik Roy},
 booktitle={arXiv pre-print},
 year={2021},
