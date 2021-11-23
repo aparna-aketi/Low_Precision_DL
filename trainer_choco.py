@@ -143,7 +143,7 @@ def partition_trainDataset(device):
         classes    = 10
         class_size = {x:5000 for x in range(10)}
 
-        dataset = datasets.CIFAR10(root='/home/min/a/saketi/Desktop/research/data', train=True, transform=transforms.Compose([
+        dataset = datasets.CIFAR10(root='./data', train=True, transform=transforms.Compose([
                 transforms.RandomHorizontalFlip(),
                 transforms.RandomCrop(32, 4),
                 transforms.ToTensor(),
@@ -155,7 +155,7 @@ def partition_trainDataset(device):
         classes    = 100
         class_size = {x:500 for x in range(10)}
 
-        dataset = datasets.CIFAR100(root='/home/min/a/saketi/Desktop/research/data', train=True, transform=transforms.Compose([
+        dataset = datasets.CIFAR100(root='./data', train=True, transform=transforms.Compose([
                 transforms.RandomHorizontalFlip(),
                 transforms.RandomCrop(32, 4),
                 transforms.ToTensor(),
@@ -172,7 +172,7 @@ def partition_trainDataset(device):
                                  transforms.RandomHorizontalFlip(),
                                  transforms.ToTensor(), normalize,])
 
-        data_dir = '/home/min/a/saketi/Desktop/research/data/imagenette'
+        data_dir = './data/imagenette'
 
         dataset = datasets.ImageFolder(os.path.join(data_dir, 'train'), data_transforms)
                   
@@ -194,14 +194,14 @@ def test_Dataset():
     if args.dataset=='cifar10':
         normalize = transforms.Normalize(mean=[0.4914, 0.4822, 0.4465],
                                      std=[0.2023, 0.1994, 0.2010])
-        dataset = datasets.CIFAR10(root='/home/min/a/saketi/Desktop/research/data', train=False, transform=transforms.Compose([
+        dataset = datasets.CIFAR10(root='./data', train=False, transform=transforms.Compose([
                 transforms.ToTensor(),
                 normalize,
             ]))
     elif args.dataset=='cifar100':
         normalize = transforms.Normalize(mean=[0.5071, 0.4867, 0.4408],
                                      std=[0.2675, 0.2565, 0.2761])
-        dataset = datasets.CIFAR100(root='/home/min/a/saketi/Desktop/research/data', train=False, transform=transforms.Compose([
+        dataset = datasets.CIFAR100(root='./data', train=False, transform=transforms.Compose([
                 transforms.ToTensor(),
                 normalize,
             ]))
@@ -213,7 +213,7 @@ def test_Dataset():
                                  transforms.CenterCrop(224),
                                  transforms.ToTensor(), normalize,])
 
-        data_dir = '/home/min/a/saketi/Desktop/research/data/imagenette'
+        data_dir = './data/imagenette'
 
         dataset = datasets.ImageFolder(os.path.join(data_dir, 'val'),  data_transforms)
 
