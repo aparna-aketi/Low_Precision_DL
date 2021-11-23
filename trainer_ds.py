@@ -52,7 +52,7 @@ parser.add_argument('-j', '--workers', default=4, type=int, metavar='N',  help='
 parser.add_argument('--epochs', default=200, type=int, metavar='N',   help='number of total epochs to run')
 parser.add_argument('--seed', default=1234, type=int,        help='set seed')
 parser.add_argument('--run_no', default=1, type=str, help='parallel run number, models saved as model_{rank}_{run_no}.th')
-parser.add_argument('--print-freq', '-p', default=130, type=int,    metavar='N', help='print frequency (default: 50)')
+parser.add_argument('--print-freq', '-p', default=30, type=int,    metavar='N', help='print frequency (default: 50)')
 parser.add_argument('--save-dir', dest='save_dir',    help='The directory used to save the trained models',   default='save_temp', type=str)
 parser.add_argument('--port', dest='port',   help='between 3000 to 65000',default='29500' , type=str)
 parser.add_argument('--save-every', dest='save_every',  help='Saves checkpoints at every specified number of epochs',  type=int, default=5)
