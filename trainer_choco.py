@@ -299,7 +299,7 @@ def run(rank, size):
         optimizer = optim.SGD(model.parameters(), args.lr, weight_decay=args.weight_decay, momentum = args.momentum, nesterov=True)
 
     if rank==0: print(optimizer)
-    if 'res' or 'mobile' in args.arch:
+    if 'res' in args.arch or 'mobile' in args.arch:
         lr_scheduler = optim.lr_scheduler.MultiStepLR(optimizer, gamma = 0.1, milestones=[100, 150])
     elif 'vgg' in args.arch:
         lr_scheduler = optim.lr_scheduler.MultiStepLR(optimizer, gamma = 0.5, milestones=[30, 60, 90, 120, 150, 180])
