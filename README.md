@@ -29,12 +29,13 @@ This code uses the [Facebook's Stochastic Gradient Push Repository](https://gith
 
 ### Citation
 ```
-@inproceedings{
-aketi2021,
-title={Low Precision Decentralized Distributed Training with Heterogenous Data},
-author={Sai Aparna Aketi, Sangamesh Kodge, and Kaushik Roy},
-booktitle={arXiv pre-print},
-year={2021},
-url={https://arxiv.org/abs/2111.09389}
+@article{aketi2022low,
+  title={Low precision decentralized distributed training over IID and non-IID data},
+  author={Aketi, Sai Aparna and Kodge, Sangamesh and Roy, Kaushik},
+  journal={Neural Networks},
+  volume={155},
+  pages={451--460},
+  year={2022},
+  publisher={Elsevier}
 }
 ```
